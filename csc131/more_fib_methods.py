@@ -1,4 +1,4 @@
-def fib_memoization(n: int, lookup: dict) -> int:
+def fib_memoization(n: int, lookup: dict) -> int:               # top bottom momoization
     if n < 1:
         return -1
     # base case
@@ -9,10 +9,11 @@ def fib_memoization(n: int, lookup: dict) -> int:
         lookup[n] = fib_memoization(n - 1, lookup) + fib_memoization(n - 2, lookup)
         return lookup
 
-def fib_tab(n: int) -> int:
+
+def fib_tab(n: int) -> int:                                     # bottom up tabulation
     f = [0] * (n+1)
 
-    #basecase
+    # basecase
     f[1] = 1
 
     for i in range(2, n + 1):
@@ -21,21 +22,10 @@ def fib_tab(n: int) -> int:
         print(f[n])
 
 
-
-
-
-
-
-
-
-
-
-
 def main():
     my_dictionary = {}
     f = fib_memoization(6, my_dictionary)
     print(f)
-
 
 
 if __name__ == '__main__':
