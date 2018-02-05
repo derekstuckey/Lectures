@@ -7,7 +7,8 @@ def main():
     print(d)
     for key in sorted(d.keys()):
         print("%s: %s" %(key, d[key]))
-#prints the key then the value of that key^ in alphabetical order
+# prints the key then the value of that key^ in alphabetical order
+
 
 if __name__ == '__main__':
     main()
